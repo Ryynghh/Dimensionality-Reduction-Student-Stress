@@ -2,7 +2,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ryynghh/Dimensionality-Reduction-Student-Stress/blob/main/Dimensionality_Reduction_Student_Stress.ipynb)
 
-Tugas praktik pertemuan ke-25 mata kuliah *Fundamen Sains Data* — penerapan **Principal Component Analysis (PCA)** dan **t-Distributed Stochastic Neighbor Embedding (t-SNE)** untuk mereduksi dan memvisualisasikan data tingkat stres mahasiswa berdimensi tinggi.
+Tugas praktik pertemuan ke-25 mata kuliah *Fundamen Sains Data* penerapan **Principal Component Analysis (PCA)** dan **t-Distributed Stochastic Neighbor Embedding (t-SNE)** untuk mereduksi dan memvisualisasikan data tingkat stres mahasiswa berdimensi tinggi.
 
 ## Anggota Kelompok
 
@@ -20,9 +20,9 @@ Tugas praktik pertemuan ke-25 mata kuliah *Fundamen Sains Data* — penerapan **
 Dataset yang digunakan memiliki **21 kolom** (20 fitur + 1 target), sehingga tergolong data berdimensi tinggi. Memahami dan mengeksplorasi hubungan antar fitur secara langsung sangat sulit dilakukan oleh manusia — visualisasi 21 dimensi sekaligus tidak mungkin dilakukan, dan pendekatan *pair plot* untuk setiap kombinasi fitur akan menghasilkan terlalu banyak grafik yang sulit diinterpretasikan.
 
 ### Mengapa Dimensionality Reduction Dibutuhkan
-1. **Kemampuan Visualisasi** — mereduksi 21 dimensi menjadi 2D memungkinkan data ditampilkan dalam scatter plot yang mudah dibaca, sehingga struktur internal data (cluster, sebaran, outlier) dapat teramati.
-2. **Pemahaman Data** — visualisasi hasil reduksi membantu membangun intuisi awal tentang bagaimana fitur-fitur saling berinteraksi.
-3. **Identifikasi Pola** — memudahkan penemuan tren atau sub-kelompok tersembunyi, misalnya karakteristik mahasiswa dengan tingkat stres tinggi vs rendah.
+1. **Kemampuan Visualisasi**, mereduksi 21 dimensi menjadi 2D memungkinkan data ditampilkan dalam scatter plot yang mudah dibaca, sehingga struktur internal data (cluster, sebaran, outlier) dapat teramati.
+2. **Pemahaman Data**, visualisasi hasil reduksi membantu membangun intuisi awal tentang bagaimana fitur-fitur saling berinteraksi.
+3. **Identifikasi Pola**, memudahkan penemuan tren atau sub-kelompok tersembunyi, misalnya karakteristik mahasiswa dengan tingkat stres tinggi vs rendah.
 
 ## 2. Dataset yang Digunakan
 
@@ -38,7 +38,7 @@ Dataset yang digunakan memiliki **21 kolom** (20 fitur + 1 target), sehingga ter
 |---|---|---|
 | Sifat | Linier | Non-linier |
 | Fokus | Mempertahankan varians global terbesar | Mempertahankan struktur/kedekatan lokal |
-| Output | Komponen utama (PC1, PC2) — kombinasi linear fitur asli | Koordinat 2D hasil embedding berdasarkan kemiripan lokal |
+| Output | Komponen utama (PC1, PC2), kombinasi linear fitur asli | Koordinat 2D hasil embedding berdasarkan kemiripan lokal |
 | Parameter kunci | `n_components=2` | `n_components=2`, `perplexity=30`, `random_state=42`, `max_iter=1000` |
 | Kelebihan | Cepat, hasil dapat diinterpretasi (arah varians) | Sangat baik mengungkap cluster tersembunyi |
 | Keterbatasan | Bisa kurang jelas untuk hubungan non-linier | Jarak antar cluster tidak selalu bermakna literal, lebih mahal secara komputasi |
